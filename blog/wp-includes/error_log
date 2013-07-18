@@ -1,0 +1,29 @@
+[30-Apr-2012 17:30:07] PHP Fatal error:  Class 'Walker' not found in /home/malama/public_html/blog/wp-includes/nav-menu-template.php on line 17
+[30-Apr-2012 17:30:08] PHP Fatal error:  Call to undefined function  _deprecated_file() in /home/malama/public_html/blog/wp-includes/registration.php on line 7
+[30-Apr-2012 17:30:11] PHP Fatal error:  Call to undefined function  feed_content_type() in /home/malama/public_html/blog/wp-includes/feed-rdf.php on line 8
+[30-Apr-2012 17:30:13] PHP Fatal error:  Call to undefined function  is_main_site() in /home/malama/public_html/blog/wp-includes/update.php on line 346
+[30-Apr-2012 17:30:16] PHP Fatal error:  Call to undefined function  _deprecated_file() in /home/malama/public_html/blog/wp-includes/registration-functions.php on line 7
+[30-Apr-2012 17:30:18] PHP Fatal error:  Call to undefined function  feed_content_type() in /home/malama/public_html/blog/wp-includes/feed-rss.php on line 8
+[30-Apr-2012 17:30:20] PHP Warning:  require_once(ABSPATHWPINC/class-simplepie.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/malama/public_html/blog/wp-includes/class-feed.php on line 4
+[30-Apr-2012 17:30:20] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class-simplepie.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/malama/public_html/blog/wp-includes/class-feed.php on line 4
+[30-Apr-2012 17:30:21] PHP Fatal error:  Call to undefined function  feed_content_type() in /home/malama/public_html/blog/wp-includes/feed-rss2.php on line 8
+[27-Sep-2012 22:55:16] PHP Fatal error:  Class 'Walker' not found in /home/malama/public_html/blog/wp-includes/nav-menu-template.php on line 17
+[27-Sep-2012 22:55:24] PHP Fatal error:  Call to undefined function  add_action() in /home/malama/public_html/blog/wp-includes/author-template.php on line 399
+[27-Sep-2012 22:55:31] PHP Fatal error:  Call to undefined function  is_robots() in /home/malama/public_html/blog/wp-includes/template-loader.php on line 10
+[27-Sep-2012 22:55:59] PHP Fatal error:  Call to undefined function  add_action() in /home/malama/public_html/blog/wp-includes/general-template.php on line 1285
+[27-Sep-2012 22:56:12] PHP Fatal error:  Class 'WP_Widget' not found in /home/malama/public_html/blog/wp-includes/default-widgets.php on line 14
+[27-Sep-2012 22:56:14] PHP Fatal error:  Call to undefined function  add_filter() in /home/malama/public_html/blog/wp-includes/default-filters.php on line 17
+[27-Sep-2012 22:56:16] PHP Fatal error:  Call to undefined function  add_filter() in /home/malama/public_html/blog/wp-includes/user.php on line 72
+[27-Sep-2012 22:56:21] PHP Fatal error:  Call to undefined function  add_action() in /home/malama/public_html/blog/wp-includes/kses.php on line 1360
+[27-Sep-2012 22:56:31] PHP Fatal error:  Call to undefined function  add_action() in /home/malama/public_html/blog/wp-includes/theme.php on line 1169
+[27-Sep-2012 22:56:35] PHP Fatal error:  Call to undefined function  is_admin() in /home/malama/public_html/blog/wp-includes/vars.php on line 16
+[27-Sep-2012 22:56:38] PHP Fatal error:  Call to undefined function  add_filter() in /home/malama/public_html/blog/wp-includes/shortcodes.php on line 296
+[27-Sep-2012 22:56:40] PHP Fatal error:  Call to undefined function  add_action() in /home/malama/public_html/blog/wp-includes/canonical.php on line 431
+[27-Sep-2012 22:56:50] PHP Fatal error:  Call to undefined function  add_action() in /home/malama/public_html/blog/wp-includes/taxonomy.php on line 102
+[27-Sep-2012 22:56:55] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/malama/public_html/blog/wp-includes/class.wp-styles.php on line 19
+[27-Sep-2012 22:56:58] PHP Fatal error:  Call to undefined function  _deprecated_file() in /home/malama/public_html/blog/wp-includes/registration.php on line 7
+[27-Sep-2012 22:57:10] PHP Warning:  require(ABSPATHWPINC/class.wp-dependencies.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/malama/public_html/blog/wp-includes/script-loader.php on line 25
+[27-Sep-2012 22:57:10] PHP Warning:  require(ABSPATHWPINC/class.wp-dependencies.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/malama/public_html/blog/wp-includes/script-loader.php on line 25
+[27-Sep-2012 22:57:10] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/malama/public_html/blog/wp-includes/script-loader.php on line 25
+[16-Jul-2013 13:40:17] PHP Fatal error:  Call to undefined function  _deprecated_file() in /home3/malama/public_html/blog/wp-includes/registration-functions.php on line 7
+[16-Jul-2013 13:52:08] PHP Fatal error:  Call to undefined function  _deprecated_file() in /home3/malama/public_html/blog/wp-includes/registration-functions.php on line 7

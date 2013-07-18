@@ -1,0 +1,31 @@
+/* CSS Document */
+
+.pad5 td,
+.pad5 th { padding: 5px; }
+.pad5 th { text-align: left; }
+
+.toggle-row { cursor: pointer; }
+.toggle-row th { border-bottom: 1px solid #F0F0F0; }
+.toggle-row td { 
+	border-bottom: 1px solid #F0F0F0;
+	border-top: 1px solid #FFFFFF;
+}
+.toggle-row:hover td { background-color: #F3F3F3 !important; }
+
+.scroll-box { 
+	max-height: 235px;
+	min-height: 150px;
+	overflow: auto;	
+}
+
+td.log-comment { border-bottom: 1px solid #F3F3F3; }
+
+.table-icon { 
+	width: 32px;
+	height: 32px;
+	background-repeat:no-repeat;
+}
+
+.pdf { 
+	background-image: url('images/icon-32.png');
+}

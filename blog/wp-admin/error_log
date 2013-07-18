@@ -1,0 +1,3 @@
+[20-Nov-2011 19:18:16] PHP Parse error:  syntax error, unexpected T_ELSE, expecting ',' or ';' in /home/malama/public_html/blog/wp-content/plugins/mooring-manager/mooring-manager.php on line 306
+[20-Nov-2011 21:17:16] PHP Parse error:  syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM in /home/malama/public_html/blog/wp-content/plugins/mooring-manager/mooring-manager.php on line 306
+[20-Nov-2011 21:19:16] PHP Parse error:  syntax error, unexpected '{' in /home/malama/public_html/blog/wp-content/plugins/mooring-manager/mooring-manager.php on line 306

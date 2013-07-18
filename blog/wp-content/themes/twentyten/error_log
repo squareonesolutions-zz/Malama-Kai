@@ -1,0 +1,4 @@
+[20-Mar-2012 02:30:51] PHP Fatal error:  Call to undefined function  get_header() in /home/malama/public_html/blog/wp-content/themes/twentyten/index.php on line 16
+[25-Mar-2012 11:47:46] PHP Fatal error:  Call to undefined function  get_header() in /home/malama/public_html/blog/wp-content/themes/twentyten/index.php on line 16
+[27-Apr-2012 02:59:38] PHP Fatal error:  Call to undefined function  get_header() in /home/malama/public_html/blog/wp-content/themes/twentyten/index.php on line 16
+[27-Jan-2013 19:21:45] PHP Fatal error:  Call to undefined function  get_header() in /home/malama/public_html/blog/wp-content/themes/twentyten/index.php on line 16
