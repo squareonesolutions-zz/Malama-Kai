@@ -1,0 +1,2315 @@
+/* ------- design notes -------
+xhtml and css by:	Nick Smithson | Satori
+project began:		2011.07.13
+last updated:			2011.07.28
+stylesheet-type:		all | screen
+
+------- design notes ------- */
+
+/* ------- reset_begin ------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { 
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	background:transparent;
+}
+body {
+	line-height:1.4;
+	font-family: Verdana, Sans Serif;
+}
+ol, ul {
+	list-style:none;
+}
+blockquote:before, blockquote:after {
+	content:none;
+}
+q {
+	quotes:'"' '"' "'" "'";
+}
+:focus {
+	outline:0;
+}
+ins {
+	text-decoration:none;
+}
+del {
+	text-decoration:line-through;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+sub, sup {
+	font-size:.5em;	
+}
+/* ------- reset_end ------- */
+
+/* ------- typography begin  ------- */
+/* font */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea { 
+	font-family:verdana, sans-serif;
+	font-size:12px;
+}
+/* font */
+
+/* text */
+p {
+	margin:0;
+	padding:5px 0;
+}
+.pdf_block {
+	background: url(../images/logos/filetypes/pdf-sm.png) no-repeat top left;
+	padding-left: 65px;
+	min-height: 57px;
+	margin-top: 10px;
+}
+.pdf_block span {
+	padding-top: 10px;
+	font-weight: normal;
+	font-style: italic;
+}
+.pdf_block span a {
+	font-style: italic;
+}
+blockquote {
+	margin:10px;
+	padding:10px;
+	color:#555555;
+	background:#fcfcfc;
+	border-left:1px solid #f0f0f0;
+}
+blockquote span {
+	margin:0;
+	padding:0 0 10px 0;
+	font-weight:bold;
+	display:block;
+	color:#333333;
+	background:transparent;
+}
+.quote_block {
+	margin:10px;
+	padding:0;
+	text-indent:60px;
+	text-shadow:1px 1px 5px #ffffff;
+	color:#333333;
+	background:transparent url(../images/bgi/quote_left.png) no-repeat scroll left top;
+	border-left:0px solid #f5f5f5;
+	line-height: 1.5em;
+}
+
+.quote_block span {
+	padding:10px;
+	display:block;
+	text-indent:40px;
+	background: url(../images/bgi/quote_right.png) no-repeat scroll right bottom;
+}
+ins {
+	font-style:oblique;	
+}
+abbr {
+	font-style:italic;
+	text-decoration:underline;
+}
+acronym {
+	font-style:italic;
+	text-decoration:underline;
+}
+dfn {
+	font-style:italic;
+	font-weight:bold;
+}
+pre {
+	margin:10px;
+	white-space:pre;
+	font-size:0.9em;
+}
+code {
+	margin:10px;
+	white-space:pre;
+	font-size:0.9em;
+} 
+tt {
+	margin:10px;
+	font-size:0.9em;
+}
+/* text */
+
+/* headings */
+h1 {
+	margin:0;
+	padding:0 0 20px 0;
+	font-size:1.5em;
+	font-weight:normal;
+}
+h2 {
+	margin:0;
+	padding:0px 0px 5px 0px;
+	font-size:1.4em;
+	font-weight:normal;
+}
+h3 {
+	margin:0;
+	padding:20px 0;
+	font-size:1.3em;
+	font-weight:normal;
+}
+h4 {
+	margin:0;
+	padding:15px 0;
+	font-size:1.2em;
+	font-weight:normal;
+}
+h5 {
+	margin:0;
+	padding:15px 0;
+	font-size:1.1em;
+	font-weight:normal;
+}
+h6 {
+	margin:0;
+	padding:10px 0;
+	font-size:1.0em;
+	font-weight:normal;
+}
+/* headings */
+
+
+
+
+/* anchors */
+a:link, a:visited, a:active {
+	font-weight:normal;
+	text-decoration:underline;
+	color: #6ca0b2;
+	background:transparent;
+}
+a:hover {
+	text-decoration:underline;
+	color:#000000;
+	background:transparent;
+}
+h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link, 
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited, 
+h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+	text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6 a:hover {
+	text-decoration:none;
+}
+a span {
+}
+/* anchors */
+
+
+
+/* colors */
+
+.colorBlack, a.colorBlack {
+	color: #000000;
+}
+.colorNavyBlue, a.colorNavyBlue {
+	color: #245fa4;
+}
+a.colorNavyBlue:hover{
+	color: #000000;
+}
+
+.noUnderline, a.noUnderline {
+	text-decoration: none;
+}
+a.noUnderline:hover {
+	text-decoration: underline;
+}
+
+/* colors */
+
+
+
+
+
+/* ------- typography end  ------- */
+
+/* ------- elements begin  ------- */
+/* divs */
+div {
+	position:relative;	
+}
+/* divs */
+
+/* alignment */
+.center_block {
+	margin:0 auto;
+	padding:0;
+	display:block;
+}
+.float_left {
+	margin:0;
+	padding:0 10px 0 0;
+	float:left;
+}
+.float_right {
+	margin:0;
+	padding:0 0 0 10px;
+	float:right;
+}
+/* alignment */
+
+/* clears */
+.float_clear {
+	height:0;
+	clear:both;
+}
+.float_clear-right {
+	height:0;
+	clear:right;
+}
+.float_clear-left {
+	height:0;
+	clear:left;
+}
+/* clears */
+
+/* tables */
+table {
+	margin:0;
+	padding:0;
+}
+tr {
+	margin:0;
+	padding:0;
+}
+.tr_heading {
+	color:#333333;
+	background:#f0f0f0;
+	border-top:1px solid #aaaaaa;
+	border-bottom:1px solid #aaaaaa;
+	border-left:1px solid #aaaaaa;
+}
+.tr_even {
+	color:#555555;
+	background:#fcfcfc;
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	border-left:1px solid #cccccc;
+}
+.tr_odd {
+	color:#555555;
+	background:#f7f7f7;
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	border-left:1px solid #cccccc;
+}
+th {
+	margin:0;
+	padding:5px;
+	text-align:left;
+	border-right:1px solid #aaaaaa;
+}
+td {
+	margin:0;
+	padding:0px;
+}
+td.shadow-right {
+	background: url(../images/divider-shadow-right.png) no-repeat top right;
+}
+td.shadow-left {
+	background: url(../images/divider-shadow-left.png) no-repeat top left;
+}
+td.shadow-left-sm {
+	background: url(../images/divider-shadow-left-sm.png) no-repeat top left;
+}
+td.shadow-right-sm {
+	background: url(../images/divider-shadow-left-sm.png) no-repeat top left;
+}
+
+td.shadow-left-tiny {
+	background: url(../images/divider-shadow-left-tiny.png) no-repeat top left;
+}
+
+.table_840 {
+	width:840px;
+}
+.table_840 td {
+	width:209px;
+}
+/* tables */
+
+/* lists */
+dl dt {
+	margin:0;
+	padding:0 0 2px 10px;
+}
+dl dd {
+	margin:0;
+	padding:0 0 2px 15px;
+	font-size:0.9em;
+}
+ul.empty {	
+	margin:0 0 0 30px;
+	padding:2px 30px 2px 0;
+	list-style:none;
+}
+ul {	
+	margin:0 0 0 30px;
+	padding:2px 30px 2px 0;
+	list-style:disc outside;
+}
+ol {	
+	margin:0 0 0 30px;
+	padding:2px 30px 2px 0;
+	list-style:decimal outside;
+}
+ul ul, ol ul {
+	margin:0 0 0 20px;
+	padding:2px 10px 2px 0;
+	list-style:circle outside;
+	font-size:0.9em;
+}
+ol ol, ul ol {
+	margin:0 0 0 20px;
+	padding:2px 10px 2px 0;
+	list-style:lower-alpha outside;
+	font-size:0.9em;
+}
+li {
+	margin:0;
+	padding:2px 0 2px 0;
+	text-align: left;
+}
+.list_image_00 {
+	margin:0 0 0 30px;
+	padding:5px 20px 5px 0;
+	list-style:none outside;
+}
+.list_image_00 li {
+	margin:0;
+	padding:7px 0 7px 0;
+}
+.list_image_00 li span {
+	margin:0 10px -5px -30px;
+	padding:4px 0 0 0;
+	width:20px;
+	height:16px;
+	vertical-align:bottom;
+	display:inline-block;
+	overflow:hidden;
+	text-align:center;
+	font-size:9px;
+	font-style:italic;
+	color:#333333;
+	background:transparent url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -160px 0;
+}
+.list_image_00 li:hover span {
+	color:#333333;
+	background:transparent url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -180px 0;
+}
+.list_image_01 {
+	margin:0 0 0 80px;
+	padding:5px 5px 5px 0;
+	list-style:none outside;
+}
+.list_image_01 li {
+	margin:0;
+	padding:5px 0 10px 0;
+	border-bottom:1px dashed #dddddd;
+}
+.list_image_01 li span {
+	margin:0 10px -5px -80px;
+	padding:4px 0px 0px 2px;
+	width:68px;
+	height:16px;
+	vertical-align:bottom;
+	display:inline-block;
+	overflow:hidden;
+	font-size:9px;
+	font-style:italic;
+	color:#333333;
+	background:transparent url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -360px 0;
+}
+.list_image_01 li:hover span {
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -430px 0;
+}
+/* lists */
+/* ------- elements end  ------- */
+
+/* ------- forms begin  ------- */
+
+ input, select, textarea{ 
+    color:#696969;
+    border:1px solid #D3D3D3;
+	background:url(../images/template-gfx/input_background.png) left bottom  repeat-x;
+    } 
+
+/* ------- forms end  ------- */
+
+/* ------- global begin ------- */
+/* body */
+html {
+	height:100%;
+}
+body {
+	height:100%;
+}
+body.ocean {
+	color:#000000;
+	background:#0e0e0e url(../images/bgi/ocean_body.jpg) repeat scroll 0 0;
+}
+body.island {
+	color:#000000;
+	background:#707070 url(../images/bgi/island_body.jpg) repeat scroll 0 0;
+}
+/* body */
+
+/* root */
+.root_matrix {
+	margin:0;
+	padding:0;
+	min-width:920px;
+	min-height:100%;
+}
+.root_matrix {
+	background:url(../images/bgi/ocean_root_matrix.jpg) repeat-x center top;
+}
+body.ocean .root_00 {
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url(../images/bgi/ocean_root_00.jpg) no-repeat center top;
+}
+.root_01 {
+	position:absolute;
+	top:902px;
+	left:565px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/ocean_root_01-05.png) no-repeat 0 0;
+}
+.root_02 {
+	position:absolute;
+	top:744px;
+	left:104px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/ocean_root_01-05.png) no-repeat -300px 0;
+}
+.root_03 {
+	position:absolute;
+	top:437px;
+	left:43px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/ocean_root_01-05.png) no-repeat -600px 0;
+}
+.root_04 {
+	position:absolute;
+	top:447px;
+	right:143px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/ocean_root_01-05.png) no-repeat -900px 0;
+}
+.root_05 {
+	position:absolute;
+	top:700px;
+	right:250px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/ocean_root_01-05.png) no-repeat -1200px 0;
+}
+body.island .root_matrix {
+	background:url(../images/bgi/island_root_matrix.jpg) repeat-x center top;
+}
+body.island .root_00 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(../images/bgi/island_root_00.jpg) no-repeat center top;
+}
+.root_11 {
+	position:absolute;
+	top:-108px;
+	left:37px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/island_root_01-05.png) no-repeat 0 0;
+}
+.root_12 {
+	position:absolute;
+	top:-12px;
+	left:55px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/island_root_01-05.png) no-repeat -300px 0;
+}
+body.island .root_13 {
+	position:absolute;
+	top:-154px;
+	right:141px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/island_root_01-05.png) no-repeat -600px 0;
+}
+body.island .root_14 {
+	position:absolute;
+	top:-14px;
+	right:221px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/island_root_01-05.png) no-repeat -900px 0;
+}
+.root_15 {
+	position:absolute;
+	top:-89px;
+	right:77px;
+	width:300px;
+	height:300px;
+	background:url(../images/bgi/island_root_01-05.png) no-repeat -1200px 0;
+}
+.root {
+	margin:0 auto;
+	padding:0;
+	width:776px;
+	height:100%;
+	min-height:1400px;
+}
+/* root */
+/* ------- global end ------- */
+
+/* ------- modules begin ------- */
+/* header */
+.header_matrix {
+	margin:0;
+	padding:10px 0 0 0;
+	width:100%;
+	height:179px;
+}
+.header {
+	margin:0 auto;
+	padding:0;
+	width:776px;
+	height:179px;
+}
+.header_logo_00 {
+	position:absolute;
+	top:0;
+	left:24px;
+	width:115px;
+	height:110px;
+	overflow:hidden;
+}
+.header_logo_00 h1 {
+	margin:0;
+	padding:0;
+}
+.header_logo_00 a:link, .header_logo_00 a:visited, .header_logo_00 a:active {
+	width:115px;
+	height:110px;
+	display:block;
+	background:url(../images/bgi/malama_kai_logo_00.png) no-repeat scroll 0 0;
+}
+.header_logo_00 a:hover {
+	background:url(../images/bgi/malama_kai_logo_00.png) no-repeat scroll 0 -110px;
+}
+.header_logo_00 a span {
+	display:none;
+}
+.header_logo_01 {
+	position:absolute;
+	top:24px;
+	left:115px;
+	width:350px;
+	height:55px;
+	overflow:hidden;
+}
+.header_logo_01 a:link, .header_logo_01 a:visited, .header_logo_01 a:active {
+	width:350px;
+	height:55px;
+	display:block;
+	background:url(../images/bgi/malama_kai_logo_01.png) no-repeat scroll 0 0;
+}
+.header_logo_01 a:hover {
+	background:url(../images/bgi/malama_kai_logo_01.png) no-repeat scroll 0 -55px;
+}
+.header_logo_01 a span {
+	display:none;
+}
+.header_contact {
+	position:absolute;
+	top:0;
+	right:24px;
+	width:263px;
+	height:110px;
+	overflow:hidden;	
+}
+.header_contact h6.email {
+	position:absolute;
+	top:30px;
+	right:0;
+	margin:0;
+	padding:5px 0 0 0;
+	height:15px;
+	width:185px;
+	text-indent:25px;
+	font-size:0.8em;
+	font-weight:normal;
+	text-shadow:1px 1px 2px #eeeeee;
+	color:#333333;
+	background:transparent;
+}
+.header_contact h6.email:hover {
+	text-shadow:1px 1px 2px #ffffff;
+	color:#000000;
+	background:transparent;
+}
+.header_contact h6.email span {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll 0 0;
+}
+.header_contact h6.email:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -20px 0;
+}
+.header_contact h6.phone {
+	position:absolute;
+	top:55px;
+	right:0;
+	margin:0;
+	padding:5px 0 0 0;
+	height:15px;
+	width:185px;
+	text-indent:25px;
+	font-size:0.8em;
+	font-weight:normal;
+	text-shadow:1px 1px 2px #eeeeee;
+	color:#333333;
+	background:transparent;
+}
+.header_contact h6.phone:hover {
+	text-shadow:1px 1px 2px #ffffff;
+	color:#000000;
+	background:transparent;
+}
+.header_contact h6.phone span {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -40px 0;	
+}
+.header_contact h6.phone:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -60px 0;
+}
+
+
+.header_contact h6.contactlink {
+	position:absolute;
+	top:83px;
+	right:0;
+	margin:0;
+	padding:5px 0 0 0;
+	height:15px;
+	width:185px;
+	text-indent:25px;
+	font-size:0.8em;
+	font-weight:normal;
+	text-shadow:1px 1px 2px #eeeeee;
+	color:#333333;
+	background: transparent;
+}
+.header_contact h6.contactlink a {
+	font-weight:normal;
+	text-shadow:1px 1px 2px #eeeeee;
+	color:#333333;
+}
+.header_contact h6.contactlink a:hover {
+	text-shadow:1px 1px 2px #ffffff;
+	color:#000000;
+	background:transparent;
+}
+.header_contact h6.contactlink span {
+	position:absolute;
+	top:0;
+	left:0;
+	width:185px;
+	height:20px;
+	overflow:hidden;
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll -10px -181px;
+}
+.header_contact h6.contactlink:hover a span {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll -10px -181px;
+}
+
+
+/* header */
+
+/* slider */
+.slider_matrix {
+	margin:30px 0 105px 0;
+	padding:0;
+	width:776px;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll 0 0;
+}
+.slider_top {
+	position:absolute;
+	top:-30px;
+	left:0;
+	width:776px;
+	height:30px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -776px 0;
+}
+.slider_bottom {
+	position:absolute;
+	bottom:-105px;
+	left:0;
+	width:776px;
+	height:105px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -776px -30px;
+}
+.slider {
+	margin:0;
+	padding:0 24px;
+	width:728px;
+	height:288px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -1552px 0;
+}
+.slider_images {
+	position:absolute;
+	top:0;
+	left:32px;
+	width:712px;
+	height:237px;
+	color:#000000;
+	background-color:#014a81;
+}
+.slider_images_left {
+	position:absolute;
+	top:0;
+	left:0;
+	width:356px;
+	height:237px;
+}
+.slider_images_left .slider_images_arrow {
+	position:absolute;
+	top:98px;
+	left:-32px;
+	width:25px;
+	height:40px;
+}
+.slider_images_left:hover .slider_images_arrow {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll 0 -50px;
+}
+.slider_images_right {
+	position:absolute;
+	top:0;
+	right:0;
+	width:356px;
+	height:237px;
+}
+.slider_images_right .slider_images_arrow {
+	position:absolute;
+	top:98px;
+	right:-32px;
+	width:25px;
+	height:40px;
+}
+.slider_images_right:hover .slider_images_arrow {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -40px -50px;
+}
+.slider_tabs {
+	position:absolute;
+	bottom:-10px;
+	left:32px;
+	width:712px;
+	height:61px;
+}
+.slider_tab_01 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:234px;
+	height:61px;
+}
+.slider_tab_02 {
+	position:absolute;
+	top:0;
+	left:238px;
+	width:234px;
+	height:61px;
+}
+.slider_tab_03 {
+	position:absolute;
+	top:0;
+	right:0;
+	width:234px;
+	height:61px;
+}
+.slider_tab_divider_00 {
+	position:absolute;
+	top:0;
+	left:235px;
+	width:1px;
+	height:61px;
+	color:#000000;
+	background-color:#dedede;
+	border-right:1px solid #efefef;
+}
+.slider_tab_divider_01 {
+	position:absolute;
+	top:0;
+	right:235px;
+	width:1px;
+	height:61px;
+	color:#000000;
+	background-color:#dedede;
+	border-right:1px solid #efefef;
+}
+.slider_tab_arrow {
+	position:absolute;
+	top:-18px;
+	right:107px;
+	width:20px;
+	height:20px;
+	color:#000000;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -200px 0;
+}
+.slider_tab_01:hover .slider_tab_arrow, .slider_tab_02:hover .slider_tab_arrow, .slider_tab_03:hover .slider_tab_arrow {
+	position:absolute;
+	top:-19px;
+	right:107px;
+	width:20px;
+	height:20px;
+	color:#000000;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -200px 0;
+}
+.slider_tabs a {
+	position:absolute;
+	top:0;
+	right:0;
+	margin:0;
+	padding:10px 5px 10px 39px;
+	width:190px;
+	height:41px;
+	font-size:10px;
+	text-decoration:none;
+	color:#555555;
+	background:transparent;
+}
+.slider_tabs a:hover {
+	text-decoration:none;
+	color:#000000;
+	background:transparent;
+}
+.slider_tabs a span {
+	position:absolute;
+	top:10px;
+	left:4px;
+	margin:0;
+	padding:6px 10px;
+	width:10px;
+	height:18px;
+	font-size:14px;
+	font-style:italic;
+	color:#333333;
+	background:transparent url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll 0 -20px;
+}
+.slider_tabs a:hover span {
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -30px -20px;
+}
+/* slider */
+
+/* surface_00 */
+.surface_00_matrix {
+	margin:-60px 0 0 0;
+	padding:0;
+	width:776px;
+}
+.surface_00_top {
+}
+.surface_00_bottom {
+}
+.surface_00 {
+	margin:0;
+	padding:0 32px;
+	width:712px;
+}
+.subsurface_00 {
+	text-align:center;
+	text-shadow:1px 1px 2px #000000;
+	color:#ffffff;
+	background:transparent;
+}
+.subsurface_00 h1 {
+	margin:0;	
+}
+.subsurface_00 a {
+	text-shadow:1px 1px 2px #000000;
+	color:#dddddd;
+	background:transparent;
+}
+.subsurface_00 a:hover {
+	text-shadow:1px 1px 1px #000000;
+	color:#ffffff;
+	background:transparent;
+}
+/* surface_00 */
+
+/* surface_01 */
+.surface_01_matrix {
+	margin:30px 0 65px 0;
+	padding:0;
+	width:776px;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll -2328px 0;
+}
+.surface_01_top {
+	position:absolute;
+	top:-35px;
+	left:0;
+	width:776px;
+	height:35px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -3104px 0;
+}
+.surface_01_bottom {
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	width:776px;
+	height:35px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -3104px -35px;
+}
+.surface_01 {
+	margin:0;
+	padding:0 24px;
+	width:728px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -3880px 0;
+}
+.subsurface_01 {
+	margin:0 0 0 1px;
+	padding:0 10px 10px 10px;
+	width:221px;
+	float:left;
+	text-align:center;
+	color:#ffffff;
+	background:transparent;
+}
+.subsurface_01 a {
+	text-decoration:none;
+	color:#dddddd;
+	background:transparent;
+}
+.subsurface_01 a:hover {
+	text-decoration:none;
+	text-shadow:1px 1px 2px #555555;
+	color:#ffffff;
+	background:transparent;
+}
+.subsurface_01 h2 {
+	font-size:1.4em;
+}
+.subsurface_01:hover h2 {
+	text-decoration:none;
+	font-weight: bold;
+	font-size: 1.4em;
+}	
+.subsurface_01 p {
+	font-size:0.9em;
+}
+/* surface_01 */
+
+/* surface_02 */
+.surface_02_matrix {
+	margin:45px 0 65px 0;
+	padding:0;
+	width:776px;
+}
+.surface_02_top {
+}
+.surface_02_bottom {
+}
+.surface_02 {
+	margin:0;
+	padding:0 24px;
+	width:728px;
+}
+.subsurface_02 {
+	margin:0;
+	padding:0;
+	width:242px;
+	float:left;
+	text-align:left;
+	text-shadow:1px 1px 2px #333333;
+	color:#ffffff;
+	background:transparent;
+}
+.subsurface_02 h3 {
+	margin:0 5px 10px 5px;
+	padding:0 0 5px 0;
+	font-size:1.1em;
+	font-weight:normal;
+	border-bottom:2px solid #0093ce;
+}	
+.subsurface_02 p, .subsurface_02 li {
+	font-size:0.9em;
+}
+.subsurface_02 a {
+	text-decoration:underline;
+	color:#dddddd;
+	background:transparent;
+}
+.subsurface_02 a:hover {
+	text-decoration:underline;
+	color:#ffffff;
+	background:transparent;
+}
+.subsurface_02 li a {
+	text-decoration:none;
+	color:#dddddd;
+	background:transparent;
+}
+.subsurface_02 li a:hover {
+	text-decoration:none;
+	color:#ffffff;
+	background:transparent;
+}
+.subsurface_02 li span {
+	text-shadow:1px 1px 2px #999999;
+}
+.subsurface_02_social {
+	margin:0;
+	padding:10px 0 20px 10px;
+	width:212px;
+	font-size:0.8em;
+}
+.subsurface_02_social a {
+	height:30px;
+	width:242px;
+	display:block;
+	text-decoration:none;
+}
+.subsurface_02_social a:hover {
+	text-decoration:none;
+}
+.subsurface_02_social a.facebook span {
+	margin:0 10px 0 0;
+	padding:0;
+	width:30px;
+	height:30px;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:middle;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -60px -20px;
+}
+.subsurface_02_social a.facebook:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -90px -20px;
+}
+.subsurface_02_social a.twitter span {
+	margin:0 10px 0 0;
+	padding:0;
+	width:30px;
+	height:30px;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:middle;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -120px -20px;
+}
+.subsurface_02_social a.twitter:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -150px -20px;
+}
+.subsurface_02_social a.rss span {
+	margin:0 10px 0 0;
+	padding:0;
+	width:30px;
+	height:30px;
+	display:inline-block;
+	overflow:hidden;
+	vertical-align:middle;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -180px -20px;
+}
+.subsurface_02_social a.rss:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -210px -20px;
+}
+.subsurface_02-00 {
+	margin:0 0 0 1px;
+	padding:0 10px 10px 10px;
+	width:221px;
+}
+.subsurface_02-01_matrix, .subsurface_02-02_matrix {
+	margin:25px 0;
+	padding:0;
+	width:242px;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll -4656px 0;
+}
+.subsurface_02-01_top {
+	position:absolute;
+	top:-15px;
+	left:0;
+	width:242px;
+	height:15px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -4898px 0;
+}
+.subsurface_02-02_top {
+	position:absolute;
+	top:-15px;
+	left:0;
+	width:242px;
+	height:15px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -4898px -15px;
+}
+.subsurface_02-01_bottom, .subsurface_02-02_bottom {
+	position:absolute;
+	bottom:-15px;
+	left:0;
+	width:242px;
+	height:15px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -4898px -30px;
+}
+.subsurface_02-01 {
+	margin:0;
+	padding:0 15px 10px 15px;
+	width:211px;
+}
+.subsurface_02-01 span {
+	margin:5px 0 10px 0;
+	padding:0;
+	font-size:0.8em;
+	width:211px;
+	display:block;
+	color:#dddddd;
+	background:transparent;
+}
+.subsurface_02-01 a.facebook {
+	margin:-5px 0 0 0;
+	padding:0;
+	width:16px;
+	height:16px;
+	float:right;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -220px 0;
+}
+.subsurface_02-01 a.facebook:hover {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -240px 0;
+}
+.subsurface_02-01 a.twitter {
+	margin:-5px 0 0 0;
+	padding:0;
+	width:16px;
+	height:16px;
+	float:right;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -260px 0;
+}
+.subsurface_02-01 a.twitter:hover {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -280px 0;
+}
+.subsurface_02-01 a span {
+	display:none;
+}
+.subsurface_02-02 {
+	margin:0;
+	padding:0 15px 10px 15px;
+	width:211px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -5140px -0;
+}
+.subsurface_02-02 h6 {
+	margin:0;
+	padding:0 0 10px 0;
+	font-size:1.0em;
+	font-style:italic;
+}
+.subsurface_02-02 .testimonial_pic {
+	margin:0 10px 60px 0;
+	padding:0;
+	width:59px;
+	height:59px;
+	float:left;
+	border:1px solid #569acd;
+}
+/* surface_02 */
+
+/* surface_03 */
+.surface_03_matrix {
+	margin:0 0 0 0;
+	padding:0;
+	width:776px;
+}
+.surface_03_top {
+}
+.surface_03_bottom {
+}
+.surface_03 {
+	margin:0;
+	padding:0;
+	width:776px;
+}
+.subsurface_03-left_matrix {
+	margin:20px 0 20px 14px;
+	padding:0;
+	width:302px;
+	float:left;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll -5382px 0;
+}
+.subsurface_03-left_top {
+	position:absolute;
+	top:-20px;
+	left:0;
+	width:302px;
+	height:20px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -5684px 0;
+}
+.subsurface_03-left_bottom {
+	position:absolute;
+	bottom:-20px;
+	left:0;
+	width:302px;
+	height:20px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -5684px -20px;
+}
+.subsurface_03-left {
+	margin:0;
+	padding:0 18px 0 20px;
+	width:261px;
+	min-height:141px;
+	color:#555555;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -5986px 0;
+}
+.subsurface_03-right {
+	margin:15px 34px 15px 0;
+	padding:0 0 10px 0;
+	width:420px;
+	float:right;
+	text-shadow:1px 1px 2px #dddddd;
+	color:#555555;
+	background:transparent;
+}
+.subsurface_03-right h1 {
+	margin:0;	
+	padding:0 0 10px 0;
+	font-size:1.4em;
+	text-shadow:1px 1px 2px #ffffff;
+	color:#003663;
+	background:transparent;
+}
+.subsurface_03-right a {
+	text-shadow:1px 1px 2px #cccccc;
+	color:#333333;
+	background:transparent;
+}
+.subsurface_03-right a:hover {
+	text-shadow:1px 1px 1px #eeeeee;
+	color:#000000;
+	background:transparent;
+}
+/* surface_03 */
+
+/* surface_04 */
+.surface_04_matrix {
+	margin:55px 0 200px 0;
+	padding:0;
+	width:776px;
+	min-height:550px;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll -9140px 0;
+}
+.surface_04_top {
+	position:absolute;
+	top:-35px;
+	left:0;
+	width:776px;
+	height:35px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -7064px 0;
+}
+.surface_04_00 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:776px;
+	height:520px;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll -6288px 0;
+}
+.surface_04_01 {
+	position:absolute;
+	top:520px;
+	left:0;
+	width:776px;
+	height:200px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -7064px -35px;
+}
+.surface_04_bottom {
+	position:absolute;
+	bottom:-200px;
+	left:0;
+	width:776px;
+	height:200px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -9916px -35px;
+}
+.surface_04 {
+	margin:0;
+	padding:1px 0 0 0;
+	width:776px;
+}
+.subsurface_04-sidebar_matrix {
+	position:absolute;
+	top:0;
+	left:0;
+	width:204px;
+	height:650px;
+}
+.subsurface_04-sidebar_top {
+}
+.subsurface_04-sidebar_bottom {
+}
+.subsurface_04-sidebar {
+	margin:0;
+	padding:10px 30px 10px 40px;
+	width:134px;
+	color:#555555;
+	background:transparent;
+}
+.subsurface_04-main_matrix {
+	margin:0px 0 80px 126px;
+	padding:0;
+	width:650px;
+	background:url(../images/bgi/malama_kai_surfaces.png) repeat-y scroll -7840px 0;
+}
+.subsurface_04-main_top {
+	position:absolute;
+	top:-35px;
+	left:0;
+	width:650px;
+	height:35px;
+	background:url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -8490px 0;
+}
+.subsurface_04-main_bottom {
+	position:absolute;
+	bottom:-80px;
+	left:0;
+	width:650px;
+	height:80px;
+	background: url(../images/bgi/malama_kai_surfaces.png) no-repeat scroll -8490px -35px;
+}
+.subsurface_04-main {
+	margin:0 0 0 76px;
+	padding:10px 20px 30px 20px;
+	width:510px;
+	min-height:509px;
+	color:#555555;
+	background:transparent;
+	text-align: left;
+}
+.subsurface_04-main h1 {
+	font-size:1.7em;
+	display: block;
+	text-align:center;
+	text-shadow:1px 1px 2px #ffffff;
+	color:#003663;
+	background:transparent;
+	border-bottom: 4px solid #123563;
+	margin-bottom: 15px;
+}
+.subsurface_04-main h2 {
+	text-align:auto;
+}
+ .subsurface_04-main h3 {
+ 	 font-weight:bold;
+ 	 font-style: italic;
+ 	 text-align:left;
+}
+/* surface_04 */
+
+/* content */
+.content_00 {
+}
+.content_01 {
+}
+.content_02 {
+}
+.content_03 {
+}
+.subsurface_02 .content_04 {
+	width: 250px;
+}
+.subsurface_02 .content_05 {
+	width: 250px;
+}
+.subsurface_02 .content_06 {
+	width: 250px;
+}
+/* content */
+
+/* footer */
+.footer_matrix {
+	margin:50px 0 100px 0;
+	padding:0;
+	width:776px;
+}
+.footer_top {
+	position:absolute;
+	top:-40px;
+	left:0;
+	width:776px;
+	height:40px;
+}
+.footer_bottom {
+	position:absolute;
+	bottom:-40px;
+	left:0;
+	width:776px;
+	height:40px;
+}
+.footer {
+	margin:0;
+	padding:0 24px;
+	width:728px;
+	height:125px;
+}
+body.ocean .footer_matrix {
+	background:url(../images/bgi/malama_kai_footer.png) repeat-y scroll 0 0;
+}
+body.ocean .footer_top {
+	background:url(../images/bgi/malama_kai_footer.png) no-repeat scroll -776px 0;
+}
+body.ocean .footer_bottom {
+	background:url(../images/bgi/malama_kai_footer.png) no-repeat scroll -776px -40px;
+}
+body.ocean .footer {
+	background:url(../images/bgi/malama_kai_footer.png) no-repeat scroll -1552px 0;
+}
+body.island .footer_matrix {
+	background:url(../images/bgi/malama_kai_footer.png) repeat-y scroll -2328px 0;
+}
+body.island .footer_top {
+	background:url(../images/bgi/malama_kai_footer.png) no-repeat scroll -3104px 0;
+}
+body.island .footer_bottom {
+	background:url(../images/bgi/malama_kai_footer.png) no-repeat scroll -3104px -40px;
+}
+body.island .footer {
+	background:url(../images/bgi/malama_kai_footer.png) no-repeat scroll -3880px 0;
+}
+.footer_contact {
+	position:absolute;
+	top:35px;
+	left:24px;
+	width:200px;
+	height:60px;
+}
+.footer_contact h6.email {
+	position:absolute;
+	top:10px;
+	left:15px;
+	margin:0;
+	padding:5px 0 0 0;
+	height:15px;
+	width:180px;
+	text-indent:25px;
+	font-size:0.8em;
+	font-weight:normal;
+	text-shadow:1px 1px #333333;
+	color:#cccccc;
+	background:transparent;
+}
+.footer_contact h6.email:hover {
+	text-shadow:1px 1px #000000;
+	color:#eeeeee;
+	background:transparent;
+}
+.footer_contact h6.email span {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -80px 0;
+}
+.footer_contact h6.email:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -100px 0;
+}
+.footer_contact h6.phone {
+	position:absolute;
+	top:30px;
+	left:15px;
+	margin:0;
+	padding:5px 0 0 0;
+	height:15px;
+	width:180px;
+	text-indent:25px;
+	font-size:0.8em;
+	font-weight:normal;
+	text-shadow:1px 1px #333333;
+	color:#cccccc;
+	background:transparent;
+}
+.footer_contact h6.phone:hover {
+	text-shadow:1px 1px #000000;
+	color:#eeeeee;
+	background:transparent;
+}
+.footer_contact h6.phone span {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -120px 0;	
+}
+.footer_contact h6.phone:hover span {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -140px 0;
+}
+.footer_social {
+	position:absolute;
+	top:95px;
+	left:24px;
+	width:200px;
+	height:30px;
+}
+.footer_social a.facebook {
+	position:absolute;
+	top:0;
+	left:15px;
+	width:30px;
+	height:30px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -60px -20px;
+}
+.footer_social a.facebook:hover {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -90px -20px;
+}
+.footer_social a.twitter {
+	position:absolute;
+	top:0;
+	left:45px;
+	width:30px;
+	height:30px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -120px -20px;
+}
+.footer_social a.twitter:hover {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -150px -20px;
+}
+.footer_social a.rss {
+	position:absolute;
+	top:0;
+	left:75px;
+	width:30px;
+	height:30px;
+	overflow:hidden;
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -180px -20px;
+}
+.footer_social a.rss:hover {
+	background:url(../images/bgi/malama_kai_sprite_map.png) no-repeat scroll -210px -20px;
+}
+.footer_social a span {
+	display:none;
+}
+.footer_info {
+	position:absolute;
+	top:45px;
+	right:24px;
+	width:400px;
+	height:30px;
+}
+.footer_info p {
+	margin:0;
+	padding:10px 18px 0 0;
+	text-align:right;
+	font-size:10px;
+	text-shadow:1px 1px #333333;
+	color:#cccccc;
+	background:transparent;
+}
+.footer_info a {
+	text-decoration:none;
+	text-shadow:1px 1px #333333;
+	color:#dddddd;
+	background:transparent;
+}
+.footer_info a:hover {
+	text-decoration:underline;
+	text-shadow:1px 1px #000000;
+	color:#ffffff;
+	background:transparent;
+}
+.footer_powered {
+	position:absolute;
+	top:90px;
+	right:24px;
+	width:400px;
+	height:30px;
+}
+.footer_powered p {
+	margin:0;
+	padding:10px 18px 0 0;
+	text-align:right;
+	font-size:10px;
+	text-shadow:1px 1px #333333;
+	color:#cccccc;
+	background:transparent;
+}
+.footer_powered a {
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	text-shadow:1px 1px #333333;
+	color:#dddddd;
+	background:transparent;
+}
+.footer_powered a:hover {
+	text-decoration:underline;
+	text-shadow:1px 1px #000000;
+	color:#ffffff;
+	background:transparent;
+}
+.design_valid {
+	width:130px;
+	float:right;
+}
+.design_valid p {
+	margin:0;
+	padding:0;
+	text-align:right;
+	font-size:10px;
+	color:#707070;
+	background:transparent;
+}
+.design_valid a {
+	margin:0;
+	padding:0 5px 0 0;
+	text-decoration:none;
+	color:#505050;
+	background:transparent;
+}
+.design_valid a:hover {
+	text-decoration:underline;
+	color:#909090;
+	background:transparent;
+}
+.browser_update {
+	width:110px;
+	float:right;
+}
+.browser_update p {
+	margin:0;
+	padding:0;
+	text-align:right;
+	font-size:10px;
+	color:#707070;
+	background:transparent;
+}
+.browser_update a {
+	margin:0;
+	padding:0 0 0 5px;
+	text-decoration:none;
+	color:#505050;
+	background:transparent;
+}
+.browser_update a:hover {
+	text-decoration:underline;
+	color:#909090;
+	background:transparent;
+}
+/* footer */
+/* ------- modules end ------- */
+
+/* ------- navigation begin ------- */
+/* nav_main */
+.nav_main_matrix {
+	position:absolute;
+	top:120px;
+	left:0;
+	width:776px;
+	height:69px;
+	z-index:10;
+	background:transparent url(../images/bgi/malama_kai_nav_main.png) no-repeat scroll 0 0;
+}
+.nav_main {
+	position:absolute;
+	top:15px;
+	left:42px;
+	margin:0;
+	padding:0;
+	width:692px;
+	height:39px;
+	text-align:center;
+}
+.nav_main a:link, .nav_main a:visited, .nav_main a:active {
+	margin: 0;
+	padding: 0px 13px;
+	height:39px;
+	display:inline-block;
+	vertical-align:top;
+	outline:none;
+	font-size:11px;
+	font-weight:normal;
+	text-decoration:none;
+	text-shadow:1px 1px 2px #000000;
+	color:#ffffff;
+	background:transparent;
+}
+.nav_main a span {
+	margin:-1px;
+	padding:14px 10px;
+	display:inline-block;
+}	
+.nav_main a:hover {
+	color:#ffc900;
+	background:transparent url(../images/bgi/malama_kai_nav_main.png) no-repeat scroll -200px -69px;
+}
+.nav_main a:hover span {
+}
+.nav_main a.current:link, .nav_main a.current:visited, .nav_main a.current:active {
+	color:#edc635;
+	background:transparent;
+}
+.nav_main a.current span {
+}
+.nav_main a.current:hover {
+	color:#ffc900;
+	background:transparent url(../images/bgi/malama_kai_nav_main.png) no-repeat scroll -200px -69px;
+}
+.nav_main a.current:hover span {
+}
+.nav_main .nav_divider {
+	margin:0 -10px;
+	padding:0;
+	width:10px;
+	height:39px;
+	display:inline;
+	background:url(../images/bgi/malama_kai_nav_main.png) no-repeat scroll 0 -108px;
+}
+/* nav_main */
+/* nav_sub */
+.nav_sub {
+}
+.nav_sub a:link, .nav_sub a:visited, .nav_sub a:active {
+}
+.nav_sub a span {
+}
+.nav_sub a:hover {
+}
+.nav_sub a:hover span {
+}
+.nav_sub a.current:link, .nav_sub a.current:visited, .nav_sub a.current:active {
+}
+.nav_sub a.current span {
+}
+.nav_sub a.current:hover {
+}
+.nav_sub a.current:hover span {
+}
+/* nav_sub */
+/* nav_footer */
+.nav_footer_matrix {
+	position:absolute;
+	top:-10px;
+	left:32px;
+	width:712px;
+	height:40px;
+	z-index:10;
+	background:transparent url(../images/bgi/malama_kai_nav_footer.png) no-repeat scroll 0 0;
+}
+.nav_footer {
+	position:absolute;
+	top:0;
+	left:20px;
+	margin:0;
+	padding:0;
+	width:672px;
+	height:40px;
+	text-align:center;
+}
+.nav_footer a:link, .nav_footer a:visited, .nav_footer a:active {
+	margin:0;
+	padding:0px 8px;
+	height:40px;
+	display:inline-block;
+	vertical-align:top;
+	outline:none;
+	font-size:9px;
+	font-weight:normal;
+	text-decoration:none;
+	text-shadow:1px 1px 2px #333333;
+	color:#ffffff;
+	background:transparent;
+}
+.nav_footer a span {
+	margin:0;
+	padding:15px 10px;
+	display:inline-block;
+}	
+.nav_footer a:hover {
+	text-shadow:1px 1px 2px #000000;
+	color:#ffc900;
+	background:transparent url(../images/bgi/malama_kai_nav_footer.png) no-repeat scroll -200px 0px;
+}
+.nav_footer a:hover span {
+}
+.nav_footer a.current:link, .nav_footer a.current:visited, .nav_footer a.current:active {
+	color:#edc635;
+	background:transparent;
+}
+.nav_footer a.current span {
+}
+.nav_footer a.current:hover {
+	color:#ffc900;
+	background:transparent url(../images/bgi/malama_kai_nav_footer.png) no-repeat scroll -200px 0px;
+}
+.nav_footer a.current:hover span {
+}
+.nav_footer .nav_divider {
+	margin:0 -10px;
+	padding:0;
+	width:10px;
+	height:40px;
+	overflow:hidden;
+	display:inline;
+	background:url(../images/bgi/malama_kai_nav_footer.png) no-repeat scroll 0 -80px;
+}
+/* nav_footer */
+
+/* nav_sidebar */
+.nav_sidebar_matrix {
+	position:absolute;
+	top:25px;
+	left:24px;
+	margin:0;
+	padding:5px 0 0 0;
+	width:180px;
+	height:400px;
+	overflow:hidden;
+}
+.nav_sidebar {
+}
+.nav_sidebar a:link, .nav_sidebar a:visited, .nav_sidebar a:active {
+	margin:-5px 0 0 0;
+	padding:0 0 0 14px;
+	width:178px;
+	height:35px;
+	display:block;
+	outline:none;
+	font-size:9px;
+	font-weight:normal;
+	text-decoration:none;
+	text-shadow:1px 1px 2px #cccccc;
+	color:#555555;
+	background:transparent;
+}
+.nav_sidebar a.sidebar_00:link, .nav_sidebar a.sidebar_00:visited, .nav_sidebar a.sidebar_00:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 -70px;
+}
+.nav_sidebar a.sidebar_01:link, .nav_sidebar a.sidebar_01:visited, .nav_sidebar a.sidebar_01:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 -105px;
+}
+.nav_sidebar a.sidebar_02:link, .nav_sidebar a.sidebar_02:visited, .nav_sidebar a.sidebar_02:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 -140px;
+}
+.nav_sidebar a.sidebar_03:link, .nav_sidebar a.sidebar_03:visited, .nav_sidebar a.sidebar_03:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 -175px;
+}
+
+}
+.nav_sidebar a.sidebar_corals_00:link, .nav_sidebar a.sidebar_corals_00:visited, .nav_sidebar a.sidebar_corals_00:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -70px;
+}
+.nav_sidebar a.sidebar_corals_01:link, .nav_sidebar a.sidebar_corals_01:visited, .nav_sidebar a.sidebar_corals_01:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -105px;
+}
+.nav_sidebar a.sidebar_corals_02:link, .nav_sidebar a.sidebar_corals_02:visited, .nav_sidebar a.sidebar_corals_02:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -140px;
+}
+.nav_sidebar a.sidebar_corals_03:link, .nav_sidebar a.sidebar_corals_03:visited, .nav_sidebar a.sidebar_corals_03:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -175px;
+}
+.nav_sidebar a.sidebar_corals_04:link, .nav_sidebar a.sidebar_corals_04:visited, .nav_sidebar a.sidebar_corals_04:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -210px;
+}
+.nav_sidebar a.sidebar_corals_05:link, .nav_sidebar a.sidebar_corals_05:visited, .nav_sidebar a.sidebar_corals_05:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -245px;
+}
+.nav_sidebar a.sidebar_corals_06:link, .nav_sidebar a.sidebar_corals_06:visited, .nav_sidebar a.sidebar_corals_06:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -280px;
+}
+.nav_sidebar a.sidebar_corals_07:link, .nav_sidebar a.sidebar_corals_07:visited, .nav_sidebar a.sidebar_corals_07:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -315px;
+}
+.nav_sidebar a.sidebar_corals_08:link, .nav_sidebar a.sidebar_corals_08:visited, .nav_sidebar a.sidebar_corals_08:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -350px;
+}
+
+.nav_sidebar a.sidebar_corals_09:link, .nav_sidebar a.sidebar_corals_09:visited, .nav_sidebar a.sidebar_corals_09:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -385px;
+}
+
+.nav_sidebar a.sidebar_corals_10:link, .nav_sidebar a.sidebar_corals_10:visited, .nav_sidebar a.sidebar_corals_10:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -420px;
+}
+
+.nav_sidebar a.sidebar_corals_11:link, .nav_sidebar a.sidebar_corals_11:visited, .nav_sidebar a.sidebar_corals_11:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -455px;
+}
+
+.nav_sidebar a.sidebar_corals_12:link, .nav_sidebar a.sidebar_corals_12:visited, .nav_sidebar a.sidebar_corals_12:active {
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -490px;
+}
+
+.nav_sidebar a span {
+	margin:0;
+	padding:8px 0 16px 20px;
+	width:144px;
+	display:inline-block;
+}	
+.nav_sidebar a:hover, .nav_sidebar a.sidebar_00:hover,  .nav_sidebar a.sidebar_01:hover, .nav_sidebar a.sidebar_02:hover,
+.nav_sidebar a.sidebar_03:hover {
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 -35px;
+}
+.nav_sidebar a:hover, .nav_sidebar a.sidebar_corals_00:hover,  .nav_sidebar a.sidebar_corals_01:hover, .nav_sidebar a.sidebar_corals_02:hover,
+.nav_sidebar a.sidebar_corals_03:hover, .nav_sidebar a.sidebar_corals_04:hover, .nav_sidebar a.sidebar_corals_05:hover, .nav_sidebar a.sidebar_corals_06:hover, .nav_sidebar a.sidebar_corals_07:hover, .nav_sidebar a.sidebar_corals_08:hover, .nav_sidebar a.sidebar_corals_09:hover, .nav_sidebar a.sidebar_corals_10:hover, .nav_sidebar a.sidebar_corals_11:hover, .nav_sidebar a.sidebar_corals_12:hover {
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar2.png) no-repeat scroll 0 -35px;
+}
+.nav_sidebar a:hover span {
+	padding:8px 0 16px 0;
+	width:164px;
+}
+.nav_sidebar a.current:link, .nav_sidebar a.current:visited, .nav_sidebar a.current:active {
+	color:#003663;
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 0;
+}
+.nav_sidebar a.current span {
+	padding:8px 0 16px 0;
+	width:164px;
+}
+.nav_sidebar a.current:hover {
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_nav_sidebar.png) no-repeat scroll 0 -35px;
+}
+.nav_sidebar a.current:hover span {
+}
+.nav_sidebar .nav_divider {
+	margin:0;
+	padding:0;
+	width:178px;
+	height:0px;
+}
+/* nav_sidebar */
+
+/* buttons */
+a.button_00 {
+	margin:20px 0 0 0;
+	padding:0;
+	height:30px;
+	float:left;
+	overflow:hidden;
+	text-decoration:none;
+	text-shadow:1px 1px 2px #dddddd;
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_buttons.png) no-repeat scroll 0 0;
+}
+a.button_00 span { 
+	margin:0 0 0 28px;
+	padding:8px 28px 8px 0;
+	height:	30px;
+	float:left;
+	background:url(../images/bgi/malama_kai_buttons.png) no-repeat scroll right -30px;
+}
+a.button_00:hover {
+	text-shadow:1px 1px 2px #eeeeee;
+	color:#000000;
+	background:transparent url(../images/bgi/malama_kai_buttons.png) no-repeat scroll 0 -60px;
+}
+a.button_00:hover span {
+	background:url(../images/bgi/malama_kai_buttons.png) no-repeat scroll right -90px;
+}
+div.button_donate {
+	position:absolute;
+	top:450px;
+	left:24px;
+	width:178px;
+	height:100px;
+}	
+div.button_donate a {
+	width:178px;
+	height:100px;
+	display:block;
+	background:url(../images/bgi/malama_kai_buttons.png) no-repeat scroll 0 -120px;
+}
+div.button_donate a span {
+	display:none;
+}
+div.button_donate a:hover {
+	background:url(../images/bgi/malama_kai_buttons.png) no-repeat scroll -178px -120px;
+}
+div.button_donate a:hover span {
+}
+/* buttons */
+/* ------- navigation end ------- */
+
+
+
+
+
+/* image effects */
+.image_shadow_300 {
+margin:5px 5px 10px 5px;
+width:310px;
+text-align:center;
+}
+.image_shadow_300-left {
+margin:5px 20px 10px 0;
+width:310px;
+float:left;
+text-align:left;
+}
+.image_shadow_300-right {
+margin:5px 0 10px 20px;
+width:310px;
+float:right;
+text-align:right;
+}
+.image_shadow_300 img, .image_shadow_300-left img, .image_shadow_300-right img {
+padding:5px 5px 15px 5px;
+width:300px;
+min-height:85px;
+background:url(../images/bgi/image_shadows.png) no-repeat scroll 0 bottom;
+}
+.image_shadow_180 {
+margin:5px 5px 10px 5px;
+padding:0;
+width:190px;
+text-align:center;
+}
+.image_shadow_180-left {
+margin:5px 20px 10px 0;
+padding:0;
+width:190px;
+float:left;
+text-align:left;
+}
+.image_shadow_180-right {
+margin:5px 0 10px 20px;
+padding:0;
+width:190px;
+float:right;
+text-align:right;
+}
+.image_shadow_180 img, .image_shadow_180-left img, .image_shadow_180-right img {
+padding:5px 5px 15px 5px;
+width:180px;
+min-height:85px;
+background:url(../images/bgi/image_shadows.png) no-repeat scroll -310px bottom;
+}
+.image_shadow_75 {
+margin:5px 5px 10px 5px;
+padding:0;
+width:85px;
+text-align:center;
+}
+.image_shadow_75-left {
+margin:5px 20px 10px 0;
+padding:0;
+width:85px;
+float:left;
+text-align:left;
+}
+.image_shadow_75-right {
+margin:5px 0 10px 20px;
+padding:0;
+width:85px;
+float:right;
+text-align:right;
+}
+.image_shadow_75 img, .image_shadow_75-left img, .image_shadow_75-right img {
+padding:5px 5px 15px 5px;
+width:75px;
+min-height:75px;
+background:url(../images/bgi/image_shadows.png) no-repeat scroll -500px bottom;
+}
+.image_shadow_225 {
+margin:5px 5px 10px 5px;
+padding:0;
+width:235px;
+text-align:center;
+}
+.image_shadow_225-left {
+margin:5px 20px 10px 0;
+padding:0;
+width:235px;
+float:left;
+text-align:left;
+}
+.image_shadow_225-right {
+margin:5px 0 10px 20px;
+padding:0;
+width:235px;
+float:right;
+text-align:right;
+}
+.image_shadow_225 img, .image_shadow_225-left img, .image_shadow_225-right img {
+padding:5px 5px 15px 5px;
+width:225px;
+min-height:85px;
+background:url(../images/bgi/image_shadows.png) no-repeat scroll -585px bottom;
+}
+.image_shadow_300 p, .image_shadow_300-left p, .image_shadow_300-right p,
+.image_shadow_180 p, .image_shadow_180-left p, .image_shadow_180-right p,
+.image_shadow_75 p, .image_shadow_75-left p, .image_shadow_75-right p,
+.image_shadow_225 p, .image_shadow_225-left p, .image_shadow_225-right p {
+padding:5px 5px 15px 5px;
+font-family;Verdana, sans-serif;
+font-size:1.1em;
+color:#555555;
+background:transparent;
+}
+.image_window_180 {
+margin:5px 5px 10px 5px;
+padding:0;
+width:190px;
+text-align:center;
+}
+.image_window_180-left {
+margin:0px 0px 10px 0px;
+padding:0;
+width:190px;
+float:left;
+text-align:center;
+}
+.image_window_180-right {
+margin:5px 0 10px 20px;
+padding:0;
+width:190px;
+float:right;
+text-align:center;
+}
+.image_window_180 img, .image_window_180-left img, .image_window_180-right img {
+padding:5px 5px 15px 5px;
+width:180px;
+height:180px;
+}
+.image_window_180 span, .image_window_180-left span, .image_window_180-right span {
+position:absolute;
+top:5px;
+left:5px;
+width:180px;
+height:180px;
+display:block;
+overflow:hidden;
+background:url(../images/bgi/image_windows.png) no-repeat scroll -5px -5px;
+}
+.image_window_75 {
+margin:5px 5px 10px 5px;
+padding:0;
+width:85px;
+height:75px;
+text-align:center;
+}
+.image_window_75-left {
+margin:5px 20px 10px 0;
+padding:0;
+width:85px;
+height:75px;
+float:left;
+text-align:center;
+}
+.image_window_75-right {
+margin:5px 0 10px 20px;
+padding:0;
+width:85px;
+height:75px;
+float:right;
+text-align:center;
+}
+.image_window_75 img, .image_window_75-left img, .image_window_75-right img {
+padding:5px 5px 15px 5px;
+width:75px;
+height:75px;
+}
+.image_window_75 span, .image_window_75-left span, .image_window_75-right span {
+position:absolute;
+top:5px;
+left:5px;
+width:75px;
+height:75px;
+background:url(../images/bgi/image_windows.png) no-repeat scroll -195px -110px;
+}
+.image_window_180 p, .image_window_180-left p, .image_window_180-right p,
+.image_window_75 p, .image_window_75-left p, .image_window_75-right p {
+padding:5px 5px 15px 5px;
+font-family:Impact,Verdana, sans-serif;
+font-size:1.1em;
+color:#555555;
+background:transparent;
+}
+/* image effects */
+
+
+
+
+
+.disclaimer, a.disclaimer {
+	font-size: 11px;
+}
+
+a.back-to-top {
+	font-size: 9px;
+}
+
+img.social, a.social {
+	margin-right: 10px;
+	margin-left: 0px;
+}
+
+img.padding-left, input.padding-left, .padding-left {
+	padding-left: 10px;
+}
+img.padding-right, input.padding-right, .padding-right {
+	padding-right: 10px;
+}
+img.padding-top, input.padding-top, .padding-top {
+	padding-left: 5px;
+}
+img.padding-bottom, input.padding-bottom, .padding-bottom {
+	padding-right: 20px;
+}
+
+
+.fish {
+	background: no-repeat top right;
+	min-height: 375px;
+}
+.bluefish {
+	background-image:url(../images/big-fish/bluefish.png);
+}
+.redfish {
+	background-image:url(../images/big-fish/redfish.png);
+}
+.yellowfish {
+	background-image:url(../images/big-fish/yellowfish.png);
+}
+.orangefish {
+	background-image:url(../images/big-fish/orangefish.png);
+}
+.greenfish {
+	background-image:url(../images/big-fish/greenfish.png);
+}
+.bigblue {
+	background-image:url(../images/big-fish/bigblue.png);
+}
+.spikeyfish {
+	background-image:url(../images/big-fish/spikey.png);
+}
